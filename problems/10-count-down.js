@@ -11,7 +11,7 @@ invoked below:
 Example 1:
   console.log(countDownTimer(0)); // prints "Happy New Year!"
 
-Example 3:
+Example 2:
   let oneDay = countDownTimer(1); // returns a function
   console.log(oneDay()); // prints "Happy New Year!"
 
