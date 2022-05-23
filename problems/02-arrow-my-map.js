@@ -25,5 +25,5 @@ console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 try {
   module.exports = arrowMyMap;
 } catch (e) {
-  return null;
+  module.exports = null;
 }

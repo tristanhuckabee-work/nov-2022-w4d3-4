@@ -17,5 +17,5 @@ arrowRestSum(0); // => 0
 try {
   module.exports = arrowRestSum;
 } catch (e) {
-  return undefined;
+  module.exports = null;
 }

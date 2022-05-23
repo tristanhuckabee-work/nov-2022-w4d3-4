@@ -21,5 +21,5 @@ arrowGetFullName(p2); // => 'Charlie Brown'
 try {
   module.exports = arrowGetFullName;
 } catch (e) {
-  return null;
+  module.exports = null;
 }

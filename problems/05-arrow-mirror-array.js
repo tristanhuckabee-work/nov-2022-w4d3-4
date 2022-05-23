@@ -17,5 +17,5 @@ arrowMirrorArray(['a', 'b', 'c', 'd']); // => [ 'a', 'b', 'c', 'd', 'd', 'c', 'b
 try {
   module.exports = arrowMirrorArray;
 } catch (e) {
-  return null;
+  module.exports = null;
 }

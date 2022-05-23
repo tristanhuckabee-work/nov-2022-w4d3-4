@@ -21,5 +21,5 @@ let result3 = addFive(37); // returns 42
 try {
   module.exports = addFive;
 } catch (e) {
-  return null;
+  module.exports = null;
 }

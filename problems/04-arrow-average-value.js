@@ -17,5 +17,5 @@ arrowAvgValue([100, 60, 64]); // => 74.66666666666667
 try {
   module.exports = arrowAvgValue;
 } catch (e) {
-  return undefined;
+  module.exports = null;
 }
