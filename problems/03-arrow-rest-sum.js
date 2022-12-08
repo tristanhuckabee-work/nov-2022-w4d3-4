@@ -10,7 +10,18 @@ arrowRestSum(1, 2, 3, 4, 5, 6, 7, 8, 9); // => 45
 arrowRestSum(0); // => 0
 ***********************************************************************/
 
-// Your code here
+const arrowRestSum = (...nums) => nums.reduce( (accum, el) => accum + el, 0 )
+// const arrowRestSum = (...nums) => {
+//   let sum = 0;
+
+//   for ( let i = 0; i < nums.length; i++) {
+//     let el = nums[i];
+
+//     sum += el;
+//   }
+
+//   return sum;
+// }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
