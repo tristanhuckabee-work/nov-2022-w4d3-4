@@ -10,7 +10,25 @@ arrowRestSum(1, 2, 3, 4, 5, 6, 7, 8, 9); // => 45
 arrowRestSum(0); // => 0
 ***********************************************************************/
 
-// Your code here
+// const arrowRestSum = ( ...num ) => num.reduce((a, c) => a + c, 0);   1-liner/10
+// const arrowRestSum = ( ...num ) => {
+//   return num.reduce((a, c) => {
+//     return a + c
+//   }, 0);
+// }
+
+//10 lego-bricks/10
+const arrowRestSum = ( ...num ) => {
+  let sum = 0;
+
+  for (let i = 0; i < num.length; i++ ) { 
+    let el = num[i];
+
+    sum += el;
+  }
+
+  return sum;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
