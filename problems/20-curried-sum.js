@@ -25,8 +25,28 @@ If you're confused, think of it this way: `_curriedSum` keeps collecting
 arguments and returning itself until it has enough arguments, at which point it
 actually does the required work of summing.
 
+AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
+- Come up with at least two situations (one per person) on when currying would
+  be useful
+***********************************************************************/
 
-Example:
+const curriedSum = (numArgs) => {
+  if ( numArgs <= 0 ) return null;
+  let numbers = [];
+
+  const _curriedSum = (num) => {
+    numbers.push( num );
+    
+    if ( numbers.length === numArgs ) {
+      return numbers.reduce( (a, el) => a + el, 0);
+    } else {
+      return _curriedSum;
+    }
+  }
+
+  return _curriedSum;
+}
+
 // 1
 const sum = curriedSum(4); // returns a function
 sum(5) // returns a function
@@ -36,14 +56,7 @@ sum(20); // => returns 75
 
 // 2
 // this function can also be invoked like this:
-const sum = curriedSum(3)(2)(1)(7); // => returns 10
-
-AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
-- Come up with at least two situations (one per person) on when currying would
-  be useful
-***********************************************************************/
-
-// Your code here
+// const sum = curriedSum(3)(2)(1)(7); // => returns 10
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

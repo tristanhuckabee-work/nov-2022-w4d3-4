@@ -45,8 +45,8 @@ const interrupter = word => str => str.split(' ').join(' ' + word + ' ');
   // return func;
 // }
 
-let rudePerson2 = interrupter("yo"); // => returns a function
-console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
+// let rudePerson2 = interrupter("yo"); // => returns a function
+// console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

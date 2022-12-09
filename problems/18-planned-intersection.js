@@ -15,7 +15,17 @@ console.log(fame(["a", "f", "z", "b"])); // returns [ 'f', 'a' ]
 
 *******************************************************************************/
 
-// Your code here
+const plannedIntersect = (firstArr) => {
+  return (secondArr) => {
+    return firstArr.filter( el => {
+      if ( secondArr.includes( el ) ) {
+        return true;
+      } else {
+        return false;
+      }
+    })
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 
