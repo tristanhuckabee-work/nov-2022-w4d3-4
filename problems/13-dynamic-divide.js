@@ -24,6 +24,8 @@ const dynamicDivide = (divisor) => {
   }
 }
 
+// const dynamicDivide = d => n => n / d;
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

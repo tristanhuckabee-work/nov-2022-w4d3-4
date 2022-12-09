@@ -29,19 +29,17 @@ Example 4:
 ***********************************************************************/
 
 const countDownTimer = (n) => {
-  if (n <= 0) {
+  if ( n <= 0 ) {
     return 'Happy New Year!';
   } else {
-    return  () => {
+    return () => {
       n--;
-      if ( n === 0) {
-        return 'Happy New Year!';
-      } else {
-        return countDownTimer(n);
-      }
+      return countDownTimer( n );
     }
   }
 }
+
+// const countDownTimer = n => n <= 0 ? 'Happy New Year!' : () => countDownTimer( n -= 1 );
 
 // let threeDays = countDownTimer(3); // returns a function
 // console.log(threeDays()); // returns a function

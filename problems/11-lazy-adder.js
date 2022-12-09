@@ -30,6 +30,8 @@ const lazyAdder = firstNum => {
   }
 }
 
+// const lazyAdder = f => s => t => f + s + t;
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
