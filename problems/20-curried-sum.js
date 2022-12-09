@@ -10,16 +10,7 @@ and returns a function that can be successively called with single arguments
 until it finally returns a sum.
 
 Here is a breakdown of how curriedSum(numArgs) should work:
-    - Define an empty array, `numbers`.
-    - Define a function, `_curriedSum` that:
-        - Closes over `numArgs` and `numbers`.
-        - Takes a single postive integer greater than 0 as an argument.
-          - If number is less than or equal to 0 return null
-        - Appends this to the `numbers` array each time.
-        - If `numbers.length === numArgs`, it sums the numbers in the array and
-        returns the result.
-        - Else, it returns itself.
-    - Returns `_curriedSum`.
+    
 
 If you're confused, think of it this way: `_curriedSum` keeps collecting
 arguments and returning itself until it has enough arguments, at which point it
@@ -42,8 +33,30 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 - Come up with at least two situations (one per person) on when currying would
   be useful
 ***********************************************************************/
+// - Define an empty array, `numbers`.
+//     - Define a function, `_curriedSum` that:
+//         - Closes over `numArgs` and `numbers`.
+//         - Takes a single postive integer greater than 0 as an argument.
+//           - If number is less than or equal to 0 return null
+//         - Appends this to the `numbers` array each time.
+//         - If `numbers.length === numArgs`, it sums the numbers in the array and
+//         returns the result.
+//         - Else, it returns itself.
+//     - Returns `_curriedSum`.
+const curriedSum = (numArgs) => {
+  if ( numArgs <= 0 ) return null;
 
-// Your code here
+  let numbers = [];
+  const _curriedSum = (num) => {
+    numbers.push( num );
+    if (numbers.length === numArgs) {
+      return numbers.reduce( (a, el) => a + el, 0);
+    } else {
+      return _curriedSum;
+    }
+  }
+  return _curriedSum;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

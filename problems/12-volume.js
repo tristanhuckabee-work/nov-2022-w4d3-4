@@ -29,13 +29,23 @@ const recVolume = (h) => {
       return () => {};
     }
   }
-}
 
-let test = recVolume(5);
-console.log(test(4));
-console.log(test(3)); //60
-console.log(test(3));
-console.log(test(3));
+  /* Bill's Solution
+  function recVolume = (h) => {
+    const dims = [h];
+
+    return addDimension( d ) => {
+      dims.push( d );
+
+      if ( dims.length >= 3 ) {
+        return dims[0] * dims[1] * dims[2];
+      } else {
+        return addDimension;
+      }
+    }
+  }
+  */
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
