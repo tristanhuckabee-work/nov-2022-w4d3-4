@@ -33,8 +33,8 @@ const countDownTimer = (n) => {
     return 'Happy New Year!';
   } else {
     return () => {
-      n--;
-      return countDownTimer( n );
+      // n--;
+      return countDownTimer( n -= 1 );
       // if (n === 0) {
       //   return 'Happy New Year!';
       // } else {
@@ -43,6 +43,8 @@ const countDownTimer = (n) => {
     }
   }
 }
+
+// const countDownTimer = n => n <= 0 ? 'Happy New Year!' : () => countDownTimer( n -= 1 );
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
