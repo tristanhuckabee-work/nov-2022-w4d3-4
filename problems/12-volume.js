@@ -12,8 +12,30 @@ function returned by recVolume should continue to return the original volume.
 
 
 ***********************************************************************/
+const recVolume = (h) => {
+  let calls = 0;
+  let vol = h;
 
-// Your code here
+  return (d) => {
+    calls++;
+
+    if ( calls > 2) {
+      return vol;
+    } else if ( calls === 2 ) {
+      vol *= d;
+      return vol
+    } else {
+      vol *= d;
+      return () => {};
+    }
+  }
+}
+
+let test = recVolume(5);
+console.log(test(4));
+console.log(test(3)); //60
+console.log(test(3));
+console.log(test(3));
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
