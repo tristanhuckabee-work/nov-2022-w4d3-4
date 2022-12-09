@@ -13,7 +13,24 @@ function returned by recVolume should continue to return the original volume.
 
 ***********************************************************************/
 
-// Your code here
+const recVolume = height => {
+  let calls = 0; //how many times has it been called
+  let volume = height;  // volume = height * width * length
+
+  return (d) => { // returned function
+    calls++;  // count how many calls
+
+    if ( calls > 2 ) { //if we've already had all dimension entered
+      return volume;
+    } else if ( calls === 2 ) { // if this is final dimension
+      volume *= d; // multiply area (h * w) by length
+      return volume;
+    } else { // first dimension entered
+      volume *=d; // multiply height * width
+      return () => {}; //return a function for the specs
+    }
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
